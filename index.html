@@ -235,7 +235,7 @@
     for(var i in lines){
       var line = lines[i];
       // console.log(line)
-      if(line.startsWith('Enrollment')){
+      if(line.startsWith('Roster')){
         var start = line.indexOf(': ');
         var end = line.indexOf(' #');
         schoolName=line.substring(start+2,end).trim();
@@ -250,7 +250,7 @@
         var id = words[words.length-3]+words[words.length-2]+words[words.length-1];
         // console.log(id)
         // const names = nameRe.exec(line);
-        const names = words[0].split(",")
+        const names = words[0].split(", ")
         console.log(names)
         const firstName = names[1];
         const lastName = names[0];
