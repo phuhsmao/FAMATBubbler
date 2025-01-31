@@ -160,7 +160,7 @@
       try{
         if(green[i/2+1]){
           var name = kids[i].innerText;
-          var id = kids[i+1].innerText+(team[i/2].checked?"1":"0");
+          var id = kids[i+1].innerText + team[i/2].value;
           doc.addImage(background, 'PNG',0,0,611.77, 791.88);
           drawPage(doc,name,id,schoolName,tests,bubbles);
           if(i!=kids.length-2)
@@ -208,17 +208,9 @@
     img.src=check;
     green[index]=false;
   }
-  function addRow(){
-    var newRow=document.getElementById("students").getElementsByTagName('tbody')[0].insertRow(counter);
-    newRow.innerHTML = '<td><span id="A2" class="nameCol" contenteditable></span></td><td><span id="B2" class="idCol" contenteditable></span></td><th><input type="checkbox" class="teamBox" name=""></th><th><image class="x" type="button" onclick="flipRow('+counter+')" src="'+cross+'" width="24"/></th>'
-    newRow.style.backgroundColor=lightGreen;
-    green.push(true);
-    counter++;
-    return false;
-  }
   function addRow(name, id){
     var newRow=document.getElementById("students").getElementsByTagName('tbody')[0].insertRow(counter);
-    newRow.innerHTML = '<td><span id="A2" class="nameCol" contenteditable>'+name+'</span></td><td><span id="B2" class="idCol" contenteditable>'+id+ '</span></td><th><input type="checkbox" class="teamBox" name=""></th><th><image class="x" type="button" onclick="flipRow('+counter+')" src="'+cross+'" width="24"/></th>'
+    newRow.innerHTML = '<td><span id="A2" class="nameCol" contenteditable>'+name+'</span></td><td><span id="B2" class="idCol" contenteditable>'+id+ '</span></td><th><select class="teamBox"><option value="0">None</option><option value="1">Team 1</option><option value="2">Team 2</option><option value="3">Team 3</option></select></th><th><image class="x" type="button" onclick="flipRow('+counter+')" src="'+cross+'" width="24"/></th>'
     newRow.style.backgroundColor=lightGreen;
     green.push(true);
     counter++;
@@ -246,14 +238,10 @@
       }
       else{
         var words = line.split(' ');
-        // console.log(words)
         var id = words[words.length-3]+words[words.length-2]+words[words.length-1];
-        // console.log(id)
-        // const names = nameRe.exec(line);
-        const names = words[0].split(",")
-        console.log(names)
-        const firstName = words[1];
-        const lastName = words[0];
+        const names = nameRe.exec(line);
+        const firstName = names[2];
+        const lastName = names[1];
         console.log(lastName);
         addRow(firstName+' '+lastName,id.substring(0,8));
       }

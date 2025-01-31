@@ -246,14 +246,10 @@
       }
       else{
         var words = line.split(' ');
-        // console.log(words)
         var id = words[words.length-3]+words[words.length-2]+words[words.length-1];
-        // console.log(id)
-        // const names = nameRe.exec(line);
-        const names = words[0].split(",")
-        console.log(names)
-        const firstName = words[1];
-        const lastName = words[0];
+        const names = nameRe.exec(line);
+        const firstName = names[2];
+        const lastName = names[1];
         console.log(lastName);
         addRow(firstName+' '+lastName,id.substring(0,8));
       }
