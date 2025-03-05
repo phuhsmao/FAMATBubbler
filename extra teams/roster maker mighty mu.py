@@ -120,7 +120,7 @@ def create_roster_for_sheet(excel_filepath, sheet_name):
                 no_val_0 = f"{div_num}0" # Use div_num here (Corrected)
 
 
-                roster_output += (f"{student_name_formatted} {division_name} {school_id} {student_number} {division_number+1}1 {school_id} {student_number} {division_number+1}2 {school_id} {student_number} {division_number+1}0\n") # Correct roster line with requested variables - LINE UPDATED BASED ON USER REQUEST
+                roster_output += (f"{student_name_formatted} {division_name} {school_id} {student_number} {division_number}1 {school_id} {student_number} {division_number}2 {school_id} {student_number} {division_number}0\n") # Correct roster line with requested variables - LINE UPDATED BASED ON USER REQUEST
 
     return roster_output
 
@@ -128,7 +128,7 @@ def create_roster_for_sheet(excel_filepath, sheet_name):
 # --- Main Script (No changes needed in main part) ---
 excel_file = '2025 Mighty Mu Student Codes.xlsx'  # <<<--- Make sure your file name is correct!
 schools_to_process = [
-    "Discovery Academy of Science",
+    "Clearwater Fundamental Middle",
 ]
 
 school_rosters = {}
