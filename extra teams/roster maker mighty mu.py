@@ -1,4 +1,5 @@
 import pandas as pd
+import pyperclip
 
 def get_tens_place(n):
     return abs(n) // 10 % 10  # Use abs() to handle negative numbers correctly
@@ -127,8 +128,12 @@ def create_roster_for_sheet(excel_filepath, sheet_name):
 
 # --- Main Script (No changes needed in main part) ---
 excel_file = '2025 Mighty Mu Student Codes.xlsx'  # <<<--- Make sure your file name is correct!
+
+#skiped Mildred Helms
+#high point one perosn first name
+
 schools_to_process = [
-    "Clearwater Fundamental Middle",
+    "",
 ]
 
 school_rosters = {}
@@ -141,5 +146,8 @@ if school_rosters:
     print("\n--- Generated Rosters ---")
     for school_name, roster_text in school_rosters.items():
         print(roster_text)
+        pyperclip.copy(roster_text)
+        print("Text copied to clipboard!")
+        input("Wait till Copy")
 else:
     print("\nNo rosters were generated.")
