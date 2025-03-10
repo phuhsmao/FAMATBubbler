@@ -134,7 +134,8 @@ excel_file = '2025 Mighty Mu Student Codes.xlsx'  # <<<--- Make sure your file n
 #high point one perosn first name
 
 schools_to_process = [
-    "",
+    "Mildred Helms Elementary",
+    "John Hopkins Middle"
 ]
 
 school_rosters = {}
