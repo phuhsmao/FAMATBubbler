@@ -130,11 +130,21 @@ def create_roster_for_sheet(excel_filepath, sheet_name):
 excel_file = '2025 Mighty Mu Student Codes.xlsx'  # <<<--- Make sure your file name is correct!
 
 #skiped Mildred Helms
-#cypress changed
 #high point one perosn first name
+#carwise duringlunch with Jank
+#cleartawre fundamental
 
 schools_to_process = [
-    "",
+    "Cypress Woods Elementary",
+    "Carwise Middle",
+    "Clearwater Fundamental Middle",
+    "Dunedin Highland Middle",
+    "East Lake Middle",
+    "Morgan Fitzgerald Middle",
+    "Palm Harbor Middle",
+    "Discovery Academy of Science",
+    "Gulf Coast Classical Academy",
+    "Plato Academy Palm Harbor"
 ]
 
 school_rosters = {}
