@@ -57,7 +57,7 @@ def pdf_to_images_pdf2image(pdf_path, output_folder="output_images", image_forma
 
 
 if __name__ == "__main__":
-    pdf_file_path = "testbook.pdf"
+    pdf_file_path = "pdfs/middle open.pdf"
     output_image_folder = "images"
 
     # **Important: Replace with the actual path to your poppler 'bin' directory:**
